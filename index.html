@@ -176,7 +176,7 @@
         headers.append('Authorization', `Basic ${base64Credentials}`);
 
 		// Make API request with user-input value and authorization header
-		fetch('https://api.limblecmms.com:443/v2/tasks/?locations=13425&type=2&orderBy=createdDate&limit=10&completedStart=0&status=1', {
+		fetch('https://api.limblecmms.com:443/v2/tasks/?locations=13425&type=2&orderBy=-createdDate&limit=10&completedStart=0&status=1', {
 			method: 'GET',
 			headers: headers
 		})
