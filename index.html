@@ -179,7 +179,7 @@
     function fetchData() {
 		// Make API request with user-input value and authorization header
 		// You need to fetch the asset data first to swap ID for Name
-		fetch('/api/assets') // Use the endpoint for fetching assets
+		fetch('http://localhost:3000/api/task') // Use the endpoint for fetching assets
         .then(response => response.json())
         .then(assetsData => {
             // Create a mapping of assetID to assetName
@@ -188,7 +188,7 @@
                 assetMapping[asset.assetID] = asset.name;
             });
 			
-			fetch('/api/task') // Use the endpoint you set up on the server		
+			fetch('http://localhost:3000/api/task') // Use the endpoint you set up on the server		
 				.then(response => {
 					console.log('Response status:', response.status);
 					return response.json();
